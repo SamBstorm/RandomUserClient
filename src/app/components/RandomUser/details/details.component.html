@@ -1,0 +1,22 @@
+<div>
+    <h1>{{randomUser.lastname | uppercase}}, {{randomUser.firstname | titlecase}} ({{(randomUser.gender == "male")?'Homme':'Femme'}})</h1>
+    <h2>{{randomUser.username}}</h2>
+    <img [src]="randomUser.picture">
+    <div>Date de naissance : {{randomUser.birthdate | date:"dd-MM-yyyy"}}</div>
+    <div><a href="mailto:{{randomUser.email}}">M'envoyer un courriel</a></div>
+    <div>Mot de passe : {{randomUser.password}}</div>
+    <div>Adresse :
+        <dl>
+            <dt>Rue :</dt>
+            <dd>{{randomUser.location.street}}</dd>
+            <dt>Numero :</dt>
+            <dd>{{randomUser.location.number}}</dd>
+            <dt>Ville :</dt>
+            <dd>{{randomUser.location.city}}</dd>
+            <dt>Code postal :</dt>
+            <dd>{{randomUser.location.postcode}}
+            </dd><dt>Pays :</dt>
+            <dd>{{randomUser.location.country}}</dd>
+        </dl>
+    </div>
+</div>
